@@ -1,0 +1,4 @@
+{# Page de la vue Book. Variables : id (pris dans l'URL) et method (GET ou POST). #}
+{% extends "@global/layout.twig" %}
+{% block title %}Livre {{ id }}{% endblock %}
+{% block body %}<h1>Livre {{ id }}</h1><p>Méthode : {{ method }}</p>{% endblock %}
