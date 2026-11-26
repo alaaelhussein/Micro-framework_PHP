@@ -1,0 +1,11 @@
+{% extends '@global/layout.twig' %}
+{% block title %}Accueil — Framework312{% endblock %}
+{% block body %}
+<span class="eyebrow">PROJET L312 · PHP</span>
+<h1>Un micro-framework, trois types de vues.</h1>
+<p>Explorez le routage dynamique, le rendu Twig et les réponses HTTP.</p>
+<div class="cards">
+{% for item in [{name:'TemplateView',desc:'Une page Twig avec un identifiant dynamique.',url:'/book/42'},{name:'HTMLView',desc:'Une réponse HTML directe.',url:'/hello'},{name:'JSONView',desc:'Une réponse JSON pour une API.',url:'/api/books/42'}] %}
+<section class="panel"><h2>{{ item.name }}</h2><p>{{ item.desc }}</p><p><code>{{ item.url }}</code></p><a class="action" href="{{ item.url }}">Tester la vue</a></section>
+{% endfor %}</div>
+{% endblock %}
