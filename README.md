@@ -50,7 +50,7 @@ src/
   Router/
     Router.php         interface du routeur
     SimpleRouter.php   routeur : trouve la vue qui correspond à l'URL
-    Route.php    validation et instanciation des vues
+    Route.php          validation et instanciation des vues
     Request.php        requête HTTP (étend celle de Symfony)
     Exception/         erreurs du framework, avec leur code HTTP
     View/              BaseView, HTMLView, JSONView, TemplateView
