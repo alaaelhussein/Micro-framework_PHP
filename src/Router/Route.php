@@ -16,8 +16,7 @@ use Framework312\Router\View\BaseView;
 class Route
 {
     private const VIEW_CLASS = BaseView::class;
-    // private const VIEW_USE_TEMPLATE_FUNC = 'use_template';
-    private const VIEW_RENDER_FUNC = 'render';
+
 
     private string $view;
 

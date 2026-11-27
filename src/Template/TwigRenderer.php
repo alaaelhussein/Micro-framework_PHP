@@ -33,11 +33,14 @@ class TwigRenderer implements Renderer
     public function register(string $tag)
     {
         $dir = $this->base . '/' . str_replace('\\', '/', $tag);
+
+        $this->loader->setPaths([$this->base]);
+
         if (!is_dir($dir)) {
-            // Pas de dossier dédié à cette vue : on utilise seulement le dossier racine.
             return;
         }
-        $this->loader->prependPath($dir);
-        $this->loader->addPath($dir, $tag);
+
+        $this->loader->setPaths([$dir, $this->base]);
+        $this->loader->setPaths([$dir], $tag);
     }
 }

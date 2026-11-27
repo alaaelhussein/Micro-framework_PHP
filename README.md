@@ -29,7 +29,6 @@ php -S localhost:8080 demo/index.php
 | `GET` ou `POST` http://localhost:8080/book/7ABd9x | Page Twig |
 | `GET` http://localhost:8080/api/books/42 | JSON |
 
-Aucune route n'est définie pour `/` : cette adresse renvoie une 404.
 
 Pour tester le `POST` (sous PowerShell, écrire `curl.exe`) :
 
