@@ -25,11 +25,11 @@ php -S localhost:8080 demo/index.php
 
 | Requête | Résultat |
 |---|---|
+| `GET` http://localhost:8080/ | Page d'accueil |
 | `GET` http://localhost:8080/hello | Page HTML |
 | `GET` ou `POST` http://localhost:8080/book/7ABd9x | Page Twig |
 | `GET` http://localhost:8080/api/books/42 | JSON |
 
-Aucune route n'est définie pour `/` : cette adresse renvoie une 404.
 
 Pour tester le `POST` (sous PowerShell, écrire `curl.exe`) :
 
@@ -50,6 +50,7 @@ src/
   Router/
     Router.php         interface du routeur
     SimpleRouter.php   routeur : trouve la vue qui correspond à l'URL
+    Route.php          validation et instanciation des vues
     Request.php        requête HTTP (étend celle de Symfony)
     Exception/         erreurs du framework, avec leur code HTTP
     View/              BaseView, HTMLView, JSONView, TemplateView
